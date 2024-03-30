@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="ie6 ielt8 ielt9"><![endif]-->
+<!--[if IE 7]><html class="ie7 ielt8 ielt9"><![endif]-->
+<!--[if IE 8]><html class="ie8 ielt9"><![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="theme-color" content="#ff557d">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>愿望清单</title>
+    <link rel="icon" type="image/x-icon" href="https://www.lixiaomu.fun/img/favicon.webp">
+    <link rel="apple-touch-icon" href="https://www.lixiaomu.fun/img/favicon.webp">
+    <link rel="bookmark" href="https://www.lixiaomu.fun/img/favicon.webp">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="https://www.lixiaomu.fun/img/favicon.webp">
+    <link href="asset/css/list.css" rel="stylesheet">
+    <script src="asset/js/jquery.js"></script>
+    <script src="asset/js/common.js"></script>
+
+    <script type="text/javascript">
+        function UploadCallback(ret, id, imgurl) {
+            $(function() {
+                console.log(imgurl)
+                var formid = '#event-form-' + id;
+                var $form = $(formid);
+                var $img = $form.find('.img');
+                var timestamp = Date.parse(new Date());
+                var cssImg = 'background-image:url(/' + imgurl + '?' + timestamp + ');'
+                $img.attr('style', cssImg).find('input').val(imgurl);
+            })
+            return;
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="header">
+        <h1 class="logo" role="text"><a href="/" title="list" role="link"><span class="ico"><span class='ie8-hide'></span></span><span class="txt">清单</span></a></h1>
+        <br>
+        <p class="description">原来我有这么多事没完成呢</p>
+    </div>
+
+    <div class="mainer" role="main">
+
+        <div class="event-list ">
+            <!--  -->
+            <div class='event done'><span class='event-order' role='text'><span class='order-txt'>第</span><span class='order-num'>1</span><span class='order-txt'>件事</span></span><span class='event-state'><span class='txt'>已达成</span></span>
+                <h2 class='event-title'>看海</h2>
+                <div class='event-detail'>
+                    <p class='event-image'><span class='img' style='background-image:url(https://mmbiz.qpic.cn/mmbiz_jpg/AUkUfiaBPUBWSjCN8MF7Qy8wzkm0LBYkKYyaIXHfI1mX5IREHM6icUibiaSO8hwrbMNAT1axNWnVsXqMgGIjAtKk2g/640?wxfrom=12&tp=wxpic&wx_fmt=jpeg);'></span></p>
+                    <p class='event-remark'>地点:威海</p>
+                    <p class='event-remark'>时间:2024.04.17</p>
+                    <p class='event-remark'>心情:开心🥰</p>
+
+                </div>
+            </div>
+
+            <div class='event doing'><span class='event-order' role='text'><span class='order-txt'>第</span><span class='order-num'>2</span><span class='order-txt'>件事</span></span><span class='event-state'><span class='txt'>进行中</span></span>
+                <h2 class='event-title'>一起坐摩天轮</h2>
+                <div class='event-detail'>
+                    <p class='event-image'><span class='img' style='background-image:url(https://blog.lixiaomu.fun/img/1.webp);'></span></p>
+                    <p class='event-remark'>事件完成的时间、地点以及心情描述。</p>
+                </div>
+            </div>
+            <!--  -->
+        </div>
+    </div>
+    <div class="footer">
+        <address class="copyright">&copy; LIST.WE 〔<a href=https://www.lixiaomu.fun/  target=“_blank” title="个人主页">李小沐</a>〕 </address>
+    </div>
+</body>
+
+</html>
