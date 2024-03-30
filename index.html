@@ -72,6 +72,16 @@
     <div class="footer">
         <address class="copyright">&copy; LIST.WE 〔<a href=https://www.lixiaomu.fun/  target=“_blank” title="个人主页">李小沐</a>〕 </address>
     </div>
+    <!-- 公众号防盗链 -->
+    <script>
+        (function() {
+            let meta = document.createElement('meta');
+            meta.content = 'no-referrer';
+            meta.name = 'referrer';
+            document.getElementsByTagName('head')[0].appendChild(meta);
+            console.log(document.getElementsByTagName('head'))
+        })()
+    </script>
 </body>
 
 </html>
